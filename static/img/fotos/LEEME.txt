@@ -1,0 +1,3 @@
+Pon aquí las fotos (.jpg, .png, .webp, .gif).
+La primera en orden alfabético (o la indicada en "foto_principal" de config/tarjeta.json)
+es la que se pinta al abrir el sobre "Recuerdos".

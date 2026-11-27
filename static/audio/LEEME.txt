@@ -1,0 +1,11 @@
+Pon aquí los 3 sonidos (.mp3 recomendado) y escribe sus nombres en
+config/tarjeta.json, sección "musica":
+
+  "musica": {
+    "inicio":   "sonido1.mp3",   <- página principal
+    "recuerdo": "sonido2.mp3",   <- sobre "Recuerdos" abierto
+    "carta":    "sonido3.mp3",   <- carta abierta
+    "regalo":   "sonido4.mp3"    <- al hacer clic en el regalo
+  }
+
+Si falta el sonido de inicio, suena una melodía generada de "Cumpleaños feliz".

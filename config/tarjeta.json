@@ -1,0 +1,34 @@
+{
+  "titulo": [
+    "Feliz",
+    "Cumpleaños"
+  ],
+  "mensaje": [
+    "Que este día recibas todo el amor, el",
+    "cariño y la felicidad que mereces."
+  ],
+  "anio": "2026",
+  "carta": {
+    "titulo": "Para ti 💗",
+    "saludo": "Querido Brian,",
+    "parrafos": [
+      "Hoy quiero decirte lo mucho que significas para mí y desearte un cumpleaños lleno de alegría y amor.",
+      "Gracias por cada momento, cada risa y cada abrazo.",
+      "Que este nuevo año de vida te entregue todo lo bonito que mereces.",
+      "Que todos los días de tu vida estén llenos de felicidad, amor y éxito."
+    ],
+    "firma": "Con cariño, Ale 💗",
+    "reverso": "I love you"
+  },
+  "recuerdo": {
+    "titulo": "Vale por una salida a comer",
+    "nota": "🍽️ Invitación en proceso de carga… ⏳\nDisponible apenas me llegue la quincena 😄"
+  },
+  "musica": {
+    "inicio": "sonido_1.mp3",
+    "recuerdo": "sonido_2.mp3",
+    "carta": "sonido_3.mp3",
+    "regalo": "sonido_4.mp3"
+  },
+  "foto_principal": "recuerdo.jpg"
+}
