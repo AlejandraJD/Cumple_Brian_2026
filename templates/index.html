@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
   <!-- 1) Diseño base (colores, fuentes, medidas)  2) Componentes -->
-  <link rel="stylesheet" href="/static/css/base.css">
-  <link rel="stylesheet" href="/static/css/componentes.css">
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/componentes.css">
 </head>
 <body>
   <!-- Aviso para girar el celular (GuardiaOrientacion.js) -->
@@ -39,7 +39,7 @@
     <!-- Título + corazones + frase: SVG creado a partir de la imagen base
          (se genera con herramientas/vectorizar_cabecera.py) -->
     <header class="cabecera" data-ref="cabecera">
-      <img src="/static/img/cabecera.svg" alt="" draggable="false">
+      <img src="static/img/cabecera.svg" alt="" draggable="false">
       <h1 class="solo-lectores">{{ titulo_1 }} {{ titulo_2 }}</h1>
       <p class="solo-lectores">{{ mensaje_html }} {{ anio }}</p>
     </header>
@@ -65,6 +65,6 @@
     <p class="overlay__pista">Toca para cerrar el sobre 💌</p>
   </div>
 
-  <script type="module" src="/static/js/main.js"></script>
+  <script type="module" src="static/js/main.js"></script>
 </body>
 </html>

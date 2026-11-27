@@ -15,7 +15,7 @@ class AplicacionTarjeta:
 
     def __init__(self, rutas: Rutas) -> None:
         self.rutas = rutas
-        self._galeria = Galeria(rutas.fotos, "/static/img/fotos")
+        self._galeria = Galeria(rutas.fotos, "static/img/fotos")
         self._plantilla = Plantilla(rutas.plantillas / "index.html")
 
     def tarjeta(self) -> Tarjeta:

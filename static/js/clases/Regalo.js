@@ -63,6 +63,6 @@ export class Regalo {
 
   /** Imagen del regalo (se crea con herramientas/recortar_regalo.py). */
   static svg() {
-    return '<img class="regalo__caja" src="/static/img/regalo.png" alt="" draggable="false">';
+    return '<img class="regalo__caja" src="static/img/regalo.png" alt="" draggable="false">';
   }
 }

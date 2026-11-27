@@ -13,7 +13,7 @@ class ManejadorTarjeta(SimpleHTTPRequestHandler):
 
     Rutas:
         /               -> página principal (plantilla renderizada)
-        /api/tarjeta    -> datos de la tarjeta en JSON
+        /api/tarjeta(.json) -> datos de la tarjeta en JSON
         /static/...     -> archivos de la carpeta static/
     """
 
@@ -44,7 +44,7 @@ class ManejadorTarjeta(SimpleHTTPRequestHandler):
         if ruta in ("/", "/index.html"):
             self._enviar(200, "text/html; charset=utf-8",
                          self.aplicacion.pagina_principal().encode("utf-8"))
-        elif ruta == "/api/tarjeta":
+        elif ruta in ("/api/tarjeta", "/api/tarjeta.json"):
             datos = self.aplicacion.tarjeta().a_diccionario()
             self._enviar(200, "application/json; charset=utf-8",
                          json.dumps(datos, ensure_ascii=False).encode("utf-8"))

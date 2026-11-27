@@ -86,3 +86,26 @@ python app.py --host 0.0.0.0
 ```
 
 Y abre `http://IP-DE-TU-PC:8000` en el celular. En pantallas verticales se usa automáticamente la disposición `vertical`.
+
+## Publicar en GitHub Pages (gratis)
+
+GitHub Pages no ejecuta Python, así que se publica una versión "estática" de la
+tarjeta que se genera en la carpeta `docs/`:
+
+```bash
+python herramientas/exportar_estatico.py
+git add -A
+git commit -m "Actualizar tarjeta"
+git push
+```
+
+Repite estos pasos **cada vez que cambies algo** (textos, fotos, sonidos, estilos…);
+si no, la página publicada seguirá mostrando la versión anterior.
+
+Configuración en GitHub (solo la primera vez):
+1. **Settings → General → Danger Zone → Change visibility → Public**
+2. **Settings → Pages → Source: Deploy from a branch → `main` / `/docs` → Save**
+3. La tarjeta queda en `https://alejandrajd.github.io/Cumple_Brian_2026/`
+
+Nadie puede modificar el repositorio a menos que lo agregues como colaborador.
+

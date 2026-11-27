@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" class="sonido-pendiente">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Feliz Cumpleaños</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- 1) Diseño base (colores, fuentes, medidas)  2) Componentes -->
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/componentes.css">
+</head>
+<body>
+  <!-- Aviso para girar el celular (GuardiaOrientacion.js) -->
+  <div class="aviso-giro" id="avisoGiro" role="alert" aria-hidden="true">
+    <svg class="aviso-giro__telefono" viewBox="0 0 60 100" aria-hidden="true">
+      <rect x="4" y="4" width="52" height="92" rx="9"/>
+      <line x1="22" y1="86" x2="38" y2="86"/>
+    </svg>
+    <p class="aviso-giro__texto">Gira tu celular a <strong data-orientacion>horizontal</strong><br>para ver tu sorpresa 💌</p>
+  </div>
+
+  <!-- Aviso para activar el sonido. Empieza visible desde el primer instante
+       (así no se ve la página principal antes); ReproductorMusica.js lo quita
+       si el navegador sí deja sonar la música sin clic. -->
+  <div class="aviso-sonido visible" id="avisoSonido" role="button" tabindex="0" aria-hidden="false">
+    <canvas class="aviso-sonido__destellos" id="destellosSonido" aria-hidden="true"></canvas>
+    <span class="aviso-sonido__icono" aria-hidden="true">🎵</span>
+    <p class="aviso-sonido__texto">Haz clic para activar el sonido</p>
+  </div>
+
+  <button id="musica" class="boton-musica" type="button" aria-label="Activar o pausar la música">🎵</button>
+
+  <main class="escenario" id="escenario">
+    <!-- Globos (los genera RacimoGlobos.js según la disposición) -->
+    <div class="capa-globos" data-capa="globos"></div>
+
+    <!-- Título + corazones + frase: SVG creado a partir de la imagen base
+         (se genera con herramientas/vectorizar_cabecera.py) -->
+    <header class="cabecera" data-ref="cabecera">
+      <img src="static/img/cabecera.svg" alt="" draggable="false">
+      <h1 class="solo-lectores">Feliz Cumpleaños</h1>
+      <p class="solo-lectores">Que este día recibas todo el amor, el<br>cariño y la felicidad que mereces. 2026</p>
+    </header>
+
+    <!-- Sobres (Sobre.js dibuja el SVG dentro) -->
+    <button class="sobre" type="button" data-ref="sobreCarta" data-sobre="carta" aria-label="Abrir la carta"></button>
+    <button class="sobre" type="button" data-ref="sobreRecuerdos" data-sobre="recuerdos" aria-label="Abrir los recuerdos"></button>
+
+    <!-- Regalo: al hacer clic suenan Las Mañanitas (Regalo.js) -->
+    <button class="regalo" type="button" data-ref="regalo" aria-label="Abrir el regalo: Las Mañanitas"></button>
+
+    <svg class="corona" data-ref="corona" viewBox="0 0 80 58" aria-hidden="true">
+      <path d="M8 44 L3 14 L22 28 L40 6 L58 28 L77 14 L72 44 Z"/>
+      <rect x="8" y="48" width="64" height="7" rx="2"/>
+      <circle cx="3" cy="11" r="4"/><circle cx="40" cy="5" r="4"/><circle cx="77" cy="11" r="4"/>
+    </svg>
+  </main>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <!-- Glitter de estrellitas rosas al abrir un sobre (CapaDestellos.js) -->
+    <canvas class="overlay__destellos" id="destellos" aria-hidden="true"></canvas>
+    <div class="overlay__caja"></div>
+    <p class="overlay__pista">Toca para cerrar el sobre 💌</p>
+  </div>
+
+  <script type="module" src="static/js/main.js"></script>
+</body>
+</html>

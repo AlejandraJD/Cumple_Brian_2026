@@ -7,7 +7,7 @@ export class ApiTarjeta {
     fotos: [],
   };
 
-  constructor(url = '/api/tarjeta') {
+  constructor(url = 'api/tarjeta.json') {
     this.url = url;
   }
 

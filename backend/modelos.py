@@ -74,7 +74,7 @@ class Musica:
         for pista in self.PISTAS:
             archivo = getattr(self, pista)
             existe = archivo and (carpeta_audio / archivo).is_file()
-            resultado[pista] = f"/static/audio/{archivo}" if existe else ""
+            resultado[pista] = f"static/audio/{archivo}" if existe else ""
         return resultado
 
 
